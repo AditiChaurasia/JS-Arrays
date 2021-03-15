@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <title> My activities</title>
+</head>
+
+<body>
+    <p>
+        How to declare the array?
+        <h4 id="declaration_of_arrays"></h4>
+    </p>
+    <hr>
+    <p>How to fetch the first element of the array?
+        <h4 id="fetch_first_element"></h4>
+    </p>
+    <hr>
+    <p> How to fetch the last element of the array?
+        <h4 id="fetch_last_element"></h4>
+    </p>
+    <hr>
+    <p>How to get the length of the array?
+        <h4 id="length_of_array"></h4>
+    </p>
+    <hr>
+    <p> How to loop the array?
+        <h4 id="loop_the_array"></h4>
+    </p>
+    <hr>
+    <p> How to add elements in the end?
+        <h4 id="addelements"></h4>
+    </p>
+    <hr>
+    <p>How to one more element in the end?
+        <h4 id="addsecondelement"></h4>
+    </p>
+    <hr>
+    <p>How to declare alphabets in array?
+        <h4 id="alphabetarray"></h4>
+    </p>
+    <hr>
+    <p> How to sort alphabets?
+        <h4 id="sortalpha"></h4>
+    </p>
+    <hr>
+    <p> How to reverse alphabets?
+        <h4 id="reversealphabets"></h4>
+    </p>
+    <hr>
+    <p> How to declare numbers in array?
+        <h4 id="declarenumbers"></h4>
+    </p>
+    <hr>
+    <p>How to declare max number?
+        <h4 id="maxnumber"></h4>
+    </p>
+    <hr>
+    <p>How to declare to min number?
+        <h4 id="minnumber"></h4>
+    </p>
+    <hr>
+
+    <h3 style = "background-color: rgb(123, 138, 207); font: bold;">Additional Activities</h3>
+    <p> How to add element at the start of array?
+        <h4 id="addstartingelement"></h4>
+    </p>
+    <hr>
+    <p> How to remove elements from the beginning?
+        <h4 id="remove_ele_beg"></h4>
+    </p>
+    <hr>
+    <p> How to remove elements from the end?
+        <h4 id="remove_ele_end">
+        </h4>
+    </p>
+    <hr>
+    <p> How to string two arrays?
+        <h4 id = "stringtwoarrays"></h4>
+    </p>
+
+</body>
+<script>
+    var fruits = ["Apple", "Orange", "Banana"];
+    console.log(fruits);
+    document.getElementById("declaration_of_arrays").innerHTML = fruits;
+
+    var firstfruit = fruits[0];
+    console.log(firstfruit);
+    document.getElementById("fetch_first_element").innerHTML = firstfruit;
+
+    var lastfruit = fruits[2];
+    console.log(lastfruit);
+    document.getElementById("fetch_last_element").innerHTML = lastfruit;
+
+    var lengthofarray = fruits.length;
+    console.log(lengthofarray);
+    document.getElementById("length_of_array").innerHTML = lengthofarray;
+
+    var looparray = "";
+    for (i = 0; i < fruits.length; i++) {
+        looparray = looparray + fruits[i] + "<br>";
+        console.log(fruits[i]);
+    }
+    document.getElementById("loop_the_array").innerHTML = looparray;
+
+    fruits.push("Mango");
+    console.log(fruits);
+    document.getElementById("addelements").innerHTML = fruits;
+
+    fruits.push("Kiwi");
+    console.log(fruits);
+    document.getElementById("addsecondelement").innerHTML = fruits;
+
+    var alphabets = ["d", "a", "c", "b"];
+    console.log(alphabets);
+    document.getElementById("alphabetarray").innerHTML = alphabets;
+
+    alphabets.sort();
+    console.log(alphabets);
+    document.getElementById("sortalpha").innerHTML = alphabets;
+
+    alphabets.reverse();
+    console.log(alphabets);
+    document.getElementById("reversealphabets").innerHTML = alphabets;
+
+    var numbers = ["1", "2", "3", "4"];
+    console.log(numbers);
+    document.getElementById("declarenumbers").innerHTML = numbers;
+
+    var maxnumber = Math.max.apply(Math, numbers);
+    console.log(maxnumber);
+    document.getElementById("maxnumber").innerHTML = maxnumber;
+
+    var minnumber = Math.min.apply(Math, numbers);
+    console.log(minnumber);
+    document.getElementById("minnumber").innerHTML = minnumber;
+
+    fruits.unshift("Strawberry");
+    console.log(fruits);
+    document.getElementById("addstartingelement").innerHTML = fruits;
+
+    fruits.shift();
+    console.log(fruits);
+    document.getElementById("remove_ele_beg").innerHTML = fruits;
+
+    fruits.pop()
+    console.log(fruits);
+    document.getElementById("remove_ele_end").innerHTML = fruits;
+
+    var countriesnames1 = ["India", "Russia", "China"];
+    var countriesnames2 = ["Japan", "Singapore", "Italy"];
+
+    console.log(countriesnames1.concat(countriesnames2));
+    document.getElementById("stringtwoarrays").innerHTML = countriesnames1.concat(countriesnames2);
+
+    console.log(countriesnames1.sort());
+</script>
+
+</html>
